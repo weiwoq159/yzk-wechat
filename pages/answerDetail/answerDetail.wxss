@@ -1,0 +1,142 @@
+/* pages/answerDetail/answerDetail.wxss */
+.container{
+    padding:0px;
+    padding:31rpx 25rpx 0 25rpx
+}
+.answerDetail{
+    padding:24rpx 32rpx 30rpx 32rpx;
+    background: #fff;
+    font-size: 30rpx;
+    color: #333;
+}
+
+.detail_bottom{
+    margin-top: 27rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.detail_left{
+    display: flex;
+    align-items: center
+}
+.detail_left image{
+    width:50rpx;
+    height:50rpx;
+    margin-right:18rpx; 
+}
+.detail_left text{
+    font-size: 26rpx;
+    color: #333;
+}
+.detail_right text{
+    font-size: 20rpx;
+    color:#aaa;
+}
+.reply_top{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: flex-end;
+    margin-bottom: 20rpx;
+}
+.user{
+    display: flex;
+    margin-top:15rpx;
+    align-items: center;
+}
+.AnswerPortrait{
+    width: 50rpx;
+    height: 50rpx;
+}
+.answer_name{
+    margin:0 24rpx 0 19rpx;
+    font-size: 26rpx;
+    color:#333;
+}
+.position{
+    font-size: 26rpx;
+    color:#666;
+}
+.replylist{
+    padding:17rpx 32rpx;
+    border-top: 1px solid #eee;
+}
+.time{
+    font-size: 20rpx;
+    color:#aaa;
+}
+.content{
+    margin-top:19rpx;
+    display: flex;
+}
+.detail_content{
+    font-size: 24rpx;
+    line-height: 34rpx;
+    color: #666;
+}
+.answer {
+    display: inline-block;
+    flex:0 0 50rpx;
+    font-size: 24rpx;
+    color: #666;
+    margin-right:19rpx;
+    box-sizing: border-box;
+    text-align: center
+}
+.allanswer{
+    text-align: center;
+    color: #333;
+    font-size: 26rpx;
+    padding: 21rpx;
+}
+.reply_Mes {
+    background: #eee;
+    padding: 20rpx 30rpx;
+    font-size: 24rpx;
+    color: #333;
+    margin-top:20rpx;
+}
+page{
+    background: #f8f8f8;
+}
+.rep{
+    color: #666;
+}
+.reply_Name{
+    font-size: 24rpx;
+    color: #333
+}
+.click_button {
+    font-size: 20rpx;
+    color: #666;
+    margin-top: 28rpx;
+}
+
+.click_button .butt {
+    width: 33%;
+    float: right;
+    line-height: 40rpx;
+    display: flex;
+}
+
+.click_button .butt view {
+    text-align: center;
+    height: 30rpx;
+    width: 42rpx;
+    border: 2rpx solid #666;
+    border-radius: 80px;
+    padding: 1px 9px;
+    line-height: 30rpx;
+    display: block;
+    font-size: 20rpx;
+}
+
+.click_button .butt view:first-child {
+    margin-right: 10px;
+}
+
+.click_button .butt i {
+    font-size: 20rpx;
+    margin-right: 4px;
+}

@@ -1,0 +1,60 @@
+<wxs module='fil' src='../../filter/index.wxs'></wxs>
+<view class='myPublish'>
+    <view class="backg" wx:if='{{display1 || display}}'>
+    </view>
+    <view class="select">
+        <view class="year">
+            <view class='pullList' bindtap='choseYearList'>
+                <span class='choseName'>{{year}}</span>
+                <i class='iconfont icon-lowertriangle'></i>
+            </view>
+            <view wx:if='{{display1}}' class='selectList1'>
+                <view wx:for='{{yearArr}}' wx:key='index'  bindtap='chooseYear' data-choose='{{item}}'>
+                    {{item}}
+                </view>
+            </view>
+        </view>
+        <view class="screen">
+            <view class='pullList' bindtap='choseNameList'>
+                <i class='icon-liebiao iconfont'></i>
+                <span class='choseName'>{{choseName}}</span>
+            </view>
+            <view wx:if='{{display}}' class='selectList'>
+                <view wx:for='{{status}}' wx:key='{{index}}' bindtap='chooseName' data-choose="{{item}}">
+                    {{item.name}}
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="" 
+        hover-class="none"
+        hover-stop-propagation="false" 
+        wx:for='{{publishList}}' 
+        wx:key='{{index}}'
+        > 
+    <view class='publishList'>
+            <view 
+                class='pub' 
+                bindtap='gotoD'
+                data-publish = '{{item}}'
+                >
+                <view class="left">
+                <view class='data'>{{fil.day(item.time)}}<text class='month'>{{fil.month(item.time)}}月</text></view>
+                </view>
+                <view class="right">
+                <view class='title'>
+                    {{item.title}}
+                    <text
+                    class="state, {{list.status === 2 ? 'shenhe':''}},{{item.status === 3 ? 'defeated': ''}}"
+                    >{{fil.status(item.status)}}</text>
+                </view>
+                <view class='content'>{{item.content}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view wx:if='{{publishList && publishList.length === 0}}'>
+        <p>{{message}}</p>
+    </view>
+    
+</view>

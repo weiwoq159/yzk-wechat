@@ -1,0 +1,72 @@
+<!--pages/SearchResult/SearchResult.wxml-->
+<wxs module='fil' src='../../filter/index.wxs'></wxs>
+<view class='SearchInput'>
+  <view class="ChooseBox">
+    <view
+      bindtap='changeLab'
+    >{{name}}
+      <i class='iconfont, icon-top,{{labelDis ? "aa" : "go"}}'></i>
+    </view>
+    <transition name="fade">
+      <view class='search_ul' wx:if='{{labelDis}}'>
+        <view
+          wx:for='{{options}}'
+          wx:key='index'
+          bindtap='changeChose'
+          class="{{index===index1 ? 'SelectOne' : 'bbb'}}"
+          data-item = '{{item}}'
+        >{{item.name}}</view>
+        <view class="sanjiao"></view>
+      </view>
+    </transition>
+  </view>
+  <view class="search_input">
+    <input bindconfirm='SearchInput' confirm-type='search' type="text" placeholder='请输入搜索内容' bindinput='searchKey' value="{{searchKey}}"></input>
+    <i
+      class="iconfont icon-search"
+      bindtap='SearchInput'
+    ></i>
+  </view>
+</view>
+<view class="container" wx:if='{{newsList.length !== 0}}'>
+  <view class='newsList' wx:for="{{newsList}}" wx:key="index">
+      <view bindtap='gotoDetail' data-da='{{item}}'>
+        <view class="title">
+          <i class="essence" wx:if='{{item.essence === 1}}'>
+              <i class='iconfont icon-anonymous-iconfont'></i>
+              精华
+          </i>
+          <rich-text class='newTitle' nodes="{{item.title}}"></rich-text>
+        </view>
+        <view class="content">
+          <text>{{fil.newsTitle(item.intro, 80)}}</text>
+        </view>
+      </view>
+      <view class='bottom'>
+        <text class='tags'>{{item.tags}}</text>
+        <text class='from'>来源:{{fil.newsTitle(item.source, 10)}}</text>
+        <text class='time'>更新时间:{{fil.timeFormate(item.ceateTime)}}</text>
+      </view>
+      <view class="click_button">
+        <view class="butt">
+          <view 
+            class="{{item.isLiked === 1 ? 'starActive' : 'star'}}"
+            data-index='{{index}}'
+            bindtap='goodup'
+          >
+              <i class="iconfont {{item.isLiked === 1 ? 'icon-heart1' : 'icon-heart'}}"></i>{{fil.null2zero(item.liked)}}
+          </view>
+          <view>
+              <i class="iconfont icon-liuyan"></i>{{fil.null2zero(item.commentNum)}}
+          </view>
+        </view>
+        <view class='clear'></view>
+      </view>
+    </view>
+</view>
+<view class="noResult" hover-class="none" hover-stop-propagation="false" wx:if='{{newsList.length !== "" && newsList.length === 0}}'>
+  <image class="noRes" src="https://zk.1boyun.com/static/img/rocket.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+  </image>
+  <view>未搜索到相关内容</view>
+  <view>试试从其他分类下进行搜索</view>
+</view>

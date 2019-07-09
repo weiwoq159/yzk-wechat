@@ -1,0 +1,232 @@
+page, .back{
+  height: 100%;
+}
+.back{
+  padding:0 30rpx;
+  background-image: url('https://tax.1boyun.com/static/img/TaxCut/bg.jpg');
+  background-size: 100% 100%;
+  padding-top:124rpx;
+  box-sizing: border-box
+}
+.question{
+  min-height: 700rpx;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px #ccc;
+  margin:0 auto;
+  padding: 20rpx 40rpx;
+}
+.taxCut_img{
+  width: 447rpx;
+  height: 182rpx;
+  margin: 0rpx 0 70rpx 75rpx;
+}
+.price{
+  width: 262rpx;
+  height: 24rpx;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.money text{
+  font-size: 50rpx;
+  background: #f8f8f8;
+  color: #000;
+  margin:0 2px;
+  font-weight: 500;
+}
+
+.progress{
+  width: 100%;
+  height: 12rpx;
+  border-radius: 12rpx;
+  background: #c40000;
+  margin-top: 15rpx
+}
+.blue_progress{
+  height: 12rpx;
+  background: #131d36;
+  border-radius: 12rpx;
+}
+.title{
+  display: flex;
+  text-align: center;
+  padding: 0 200rpx;
+  justify-content: space-around;
+  margin-top: 106rpx;
+}
+.title text{
+  padding:15rpx;
+  background: #131d36;
+  color:#fff;
+  margin-right: 20rpx;
+  border-radius: 6px;
+  font-weight: 900;
+}
+.answerContent{
+  margin-top:40rpx;
+  font-size: 33rpx;
+  line-height: 44rpx;
+  color: #000;
+}
+.yesOrNo image{
+  width: 270rpx;
+  height: 50rpx;
+  display: block;
+  margin: 0 auto;
+}
+.yes{
+  margin-top:60rpx!important;
+  margin-bottom: 25rpx!important;
+}
+.lastStep view image{
+  width: 288rpx;
+  height:70rpx;
+  float: right;
+  margin-top:20px;
+  margin-right: 80rpx;
+}
+.selectSon, .treatment{
+  margin-top: 70rpx;
+}
+.son_button{
+  background: #c40000;
+  color: #fff;
+  border-style: none;
+  width: 270rpx;
+  height: 50rpx;
+  border-radius: 55px;
+  position:relative;
+  display:block;
+  line-height:50rpx;
+  text-decoration:none;
+  transform:translate(0rpx, 0rpx);
+  margin:0 auto;
+}
+.son_button::after{
+  border: none;
+}
+.button-hover{
+  transform:translate(1rpx, 1rpx);
+}
+.icon-next{
+  position: absolute;
+  right: 10px;
+  font-weight: 900;
+}
+.sonNumModel{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+}
+.sonBox{
+  width: 100%;
+  background: #fff;
+  margin: 0 33px;
+  text-align: center;
+  padding: 40rpx 11px;
+}
+.num1{
+  width: 35px;
+  height: 35px;
+  border-radius: 35px;
+  background: #f8f8f8;
+  color: #333;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  float: left;
+  margin:11px
+}
+.num1 view{
+  width: 100%;
+  text-align: center;
+}
+.treatment_input{
+  background: #f8f8f8;
+  text-align: center;
+  font-size: 28rpx;
+  height: 70rpx;
+  border-radius: 70rpx;
+}
+.treatment_sure{
+  margin-top: 68rpx;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 33rpx;
+}
+
+
+.tableBody{
+  display: flex;
+  border:1px solid #000;
+  border-left-style: none;
+  border-bottom-style: none;
+  justify-content: space-between;
+  background: url("https://tax.1boyun.com/static/img/TaxCut/resultBack.png");
+}
+.colum{
+  width: 33.33%;
+  border-left:1px solid #000;
+  color: #333;
+}
+.tableBody .ul{
+  list-style: none;
+  padding: 0px;
+  font-size: 10px;
+  text-align: center;
+}
+.tableTitle, .tableFooter{
+  background: #131d36;
+}
+.tableTitle view{
+  text-align: center;
+  border: 1px solid #000;
+  border-bottom-style: none;
+  margin: 0px;
+  color: #ffffff;
+}
+.tableFooter .text{
+  width: 33.33%;
+  margin: 0px;
+  border-top-style: none;
+  color: #ffffff;
+  display: block;
+  float: right;
+  background: #c40000;
+  text-align: center
+}
+.tableBody .ul view{
+  margin-bottom: 4px;
+  height: 28rpx;
+}
+
+.clear{
+  clear: both;
+}
+.resultTitle{
+  font-size: 28rpx;
+  font-style: italic;
+  color: #333;
+  margin: 18rpx 0px
+}
+.tips{
+  font-size: 28rpx;
+  color: #333;
+  margin: 18rpx 0rpx;
+}
+.icon-next1{
+  position: absolute;
+  top:26px;
+  left:2px;
+  transform: rotate(180deg);
+  font-size: 30px;
+}

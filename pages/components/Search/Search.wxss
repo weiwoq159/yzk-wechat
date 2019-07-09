@@ -1,0 +1,126 @@
+/* pages/components/Search/Search.wxss */
+@font-face {
+    font-family: 'iconfont';
+    /* project id 966309 */
+    src: url('//at.alicdn.com/t/font_966309_px50wz6h3pf.eot');
+    src: url('//at.alicdn.com/t/font_966309_px50wz6h3pf.eot?#iefix') format('embedded-opentype'),
+        url('//at.alicdn.com/t/font_966309_px50wz6h3pf.woff2') format('woff2'),
+        url('//at.alicdn.com/t/font_966309_px50wz6h3pf.woff') format('woff'),
+        url('//at.alicdn.com/t/font_966309_px50wz6h3pf.ttf') format('truetype'),
+        url('//at.alicdn.com/t/font_966309_px50wz6h3pf.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+    content: "\e62e";
+}
+
+.icon-top:before {
+    content: "\e651";
+}
+
+.SearchInput {
+    padding: 20rpx 13rpx;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+}
+
+.ChooseBox {
+    position: relative;
+    width: 25%;
+    border: 2rpx solid #eee;
+    border-radius: 100rpx;
+    height: 50rpx;
+}
+
+.ChooseBox {
+    color: #333333;
+    padding-left: 30rpx;
+    font-size: 22rpx;
+    line-height: 50rpx;
+}
+
+.search_input {
+    position: relative;
+    width: 60%;
+}
+
+.search_input input {
+    width: 100%;
+    height: 100%;
+    border: 2rpx solid #eee;
+    border-radius: 100rpx;
+    padding-left: 30rpx;
+    box-sizing: border-box;
+    font-size: 22rpx;
+}
+
+.search_input i {
+    position: absolute;
+    right: 22rpx;
+    top: 15rpx;
+    color: #aaaaaa;
+    font-weight: 900;
+    z-index: 20;
+}
+
+.icon-top {
+    position: absolute;
+    right: 20rpx;
+    font-size: 24rpx;
+    color: #999999;
+}
+
+.ChooseBox .search_ul {
+    position: absolute;
+    background: red;
+    left: 0rpx;
+    top: 80rpx;
+    border: 2rpx solid #ebeef5;
+    border-radius: 8rpx;
+    box-shadow: 0 4rpx 24rpx 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    max-height: 360rpx;
+    overflow-y: scroll;
+    width: 240rpx;
+    z-index: 999;
+}
+
+.ChooseBox .search_ul view {
+    list-style: none;
+    line-height: 72rpx;
+    padding: 0 40rpx;
+    margin: 0;
+    font-size: 28rpx;
+    color: #606266;
+    cursor: pointer;
+    outline: none;
+    text-align: left;
+}
+
+.aa {
+    transition: all .5s;
+}
+
+.go {
+    transform: rotate(180deg);
+    transition: all .5s;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}

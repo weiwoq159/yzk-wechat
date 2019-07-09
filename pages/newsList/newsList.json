@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "custom":"../../custom-tab-bar/index",
+    "searchInput": "../components/Search/Search"
+  },
+  "navigationStyle": "custom"
+}

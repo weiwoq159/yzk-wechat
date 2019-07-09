@@ -1,0 +1,30 @@
+<wxs module='fil' src='../../filter/index.wxs'></wxs>
+<view class="container">
+    <view class="answerDetail">
+        <view class="detail_tittle">
+            {{answerDetail.content}}
+        </view>
+        <view class="detail_bottom">
+            <view class="detail_left">
+                <image class="" src="https://zk.1boyun.com/static/img/photo.png">
+                </image>
+                <text class="">{{answerDetail.userName}}</text>
+            </view>
+            <view class="detail_right">
+                <text class="">{{answerDetail.time}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="answer_reply">
+        <view class="replylist" wx:for="{{answerDetail.issueCommentList}}" wx:key='{{index}}'>
+            <view class="reply_top" hover-class="none" hover-stop-propagation="false">
+                <view class="user" hover-class="none" hover-stop-propagation="false">
+                    <image class="AnswerPortrait" src="https://zk.1boyun.com/static/img/photo.png">
+                    </image>
+                    <text class="answer_name">{{item.userName}}:</text>
+                    <text class="position">{{item.content}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

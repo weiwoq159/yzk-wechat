@@ -1,0 +1,115 @@
+var fil = {
+  timeFormate: function (value) {
+    console.log(value.slice(0, 10))
+    return value.slice(0, 10)
+  },
+  telFormate: function (value) {
+    console.log(value)
+    // return value
+    return value.slice(0,3) + '*****' + value.slice(8,11)
+  },
+  newsTitle: function (value, num) {
+    return value.slice(0, num)
+  },
+  maxNum: function (value) {
+    return value
+  },
+  returnGoodUp: function (value) {
+    if (value === null) {
+      return 0
+    } else {
+      return value
+    }
+  },
+  returnNull: function (value) {
+    console.log(value)
+    if (value === null) {
+      return ''
+    } else {
+      return value
+    }
+  },
+  iosDateFilter: function (value) {
+    var reg = getRegExp('-','g')
+    console.log(value)
+    var time = value.slice(0, 10).replace(reg, '/')
+    var hour = value.slice(11, 19)
+    var timeFormate = time + ' ' + hour
+    console.log(timeFormate)
+    var date = getDate(time)
+    var year = date.getFullYear()
+    var month = date.getMonth() + 1
+    var day = date.getDate()
+    return year + '-' + month + '-' + day + '  ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds()
+  },
+  formateTime: function (value) {
+    var date = getDate(value)
+    var year = date.getFullYear()
+    var month = (date.getMonth() + 1)
+    var day = date.getDate()
+    var hour = date.getHours()
+    var minute = date.getMinutes()
+    var second = date.getSeconds()
+    var date1 = year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second
+    return date1
+  },
+  day: function (value) {
+    console.log(value)
+    if (value.substring(8, 9) == 0) {
+      return value.substring(9, 10)
+    } else {
+      return value.substring(8, 10)
+    }
+  },
+  month: function (value) {
+    if (value.substring(5, 6) == 0) {
+      return value.substring(6, 7)
+    } else {
+      return value.substring(5, 7)
+    }
+  },
+  status: function (value) {
+    switch (value) {
+      case 1:
+        return '已发布'
+        break
+      case 2:
+        return '审核中'
+        break
+      case 4:
+        return '审核未通过'
+        break
+    }
+  },
+  null2zero: function (value) {
+    if (value === null) {
+      return 0
+    } else if (parseInt(value) >= 100000) {
+      return '10W+'
+    } else {
+      return value
+    }
+  },
+  keepTwoDecimal: function (value) {
+    var index = value.toString().indexOf('.')
+    if (index !== -1) {
+      return value.toFixed(2)
+    } else {
+      return value
+    }
+  }
+}
+module.exports = {
+  timeFormate: fil.timeFormate,
+  newsTitle: fil.newsTitle,
+  maxNum: fil.maxNum,
+  returnGoodUp: fil.returnGoodUp,
+  formateTime: fil.formateTime,
+  day: fil.day,
+  month: fil.month,
+  status: fil.status,
+  null2zero: fil.null2zero,
+  keepTwoDecimal: fil.keepTwoDecimal,
+  iosDateFilter: fil.iosDateFilter,
+  telFormate:fil.telFormate
+}

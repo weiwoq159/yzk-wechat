@@ -1,0 +1,43 @@
+<!--pages/replyDetail/replyDetail.wxml-->
+<wxs module='fil' src='../../filter/index.wxs'></wxs>
+<view class='reply'>
+    <view class="replyMesq">
+        <view class='left'>
+            <view class="photoImg">
+                <image class="" src="https://zk.1boyun.com/static/img/photo.png" mode="aspectFit|aspectFill|widthFix"
+                    lazy-load="false" binderror="" bindload="">
+                </image>
+            </view>
+        </view>
+        <view class='container'>
+            <view class="main">
+                <view class="name">
+                    <view class="title">{{content.fromUname}}</view>
+                    <view class="date">{{fil.formateTime(content.createTimes)}}</view>
+                </view>
+                <view class="text">{{content.content}}</view>
+                <view class="click_button">
+                    <view class="butt">
+                        <view class="{{item.status === 1 ? 'starActive' : 'star'}}" data-inde='{{index}}' data-index='{{item}}'
+                            bindtap='goodup'>
+                            <i class="iconfont {{item.status === 1 ? 'icon-heart1' : 'icon-heart'}}"></i>{{fil.returnGoodUp(content.goodUp)}}
+                        </view>
+                        <view data-inde='1' data-reply='{{index}}' bindtap='showReply'>
+                            <i class="iconfont icon-liuyan"></i>{{content.relpy.length}}
+                        </view>
+                    </view>
+                    <view class='clear'></view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class='messageReply' wx:for='{{content.relpy}}' wx:key='{{index}}'>
+    <view class="name">
+        <view class='userName'>{{item.replyUname}}</view>
+        <view class='time'>{{fil.formateTime(item.createTimes)}}</view>
+    </view>
+    <view class="content">
+        <view> <text wx:if='item.replyToUname'>回复:</text>{{fil.null2zero(item.replyToUname)}} {{item.content}}</view>
+    </view>
+</view>
+</view>

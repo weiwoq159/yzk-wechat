@@ -1,0 +1,13 @@
+<!--pages/components/TopTab/TopTab.wxml-->
+<view class='toptab'>
+  <view class="button_group">
+    <navigator class="" target="" class="butt_nav" url="../index/index" hover-class="navigator-hover" open-type='reLaunch'>
+        <i class='iconfont icon-home'></i>
+    </navigator>
+    <button bindgetuserinfo='login' class="login_text " hover-class="navigator-hover" open-type="getUserInfo">
+        <i class="iconfont icon-person"></i>
+    </button>
+  </view>
+  <image class="logo_image" src="https://zk.1boyun.com/static/img/logo.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+  </image>
+</view>

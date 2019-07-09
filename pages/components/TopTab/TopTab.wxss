@@ -1,0 +1,68 @@
+/* pages/components/TopTab/TopTab.wxss */
+@font-face {
+  font-family: 'iconfont';
+  /* project id 966309 */
+  src: url('//at.alicdn.com/t/font_966309_px50wz6h3pf.eot');
+  src: url('//at.alicdn.com/t/font_966309_px50wz6h3pf.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_966309_px50wz6h3pf.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_966309_px50wz6h3pf.woff') format('woff'),
+    url('//at.alicdn.com/t/font_966309_px50wz6h3pf.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_966309_px50wz6h3pf.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-person:before {
+  content: "\e61c";
+}
+
+.icon-home:before {
+  content: '\e600'
+}
+
+.toptab {
+  height: 45px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+
+.button_group {
+  position: absolute;
+  display: flex;
+  justify-content: space-around
+}
+.butt_nav{
+  display:flex;
+  align-items:center;
+}
+.butt_nav i {
+  height: 30rpx;
+  width: 30rpx;
+  margin: 0rpx 20rpx;
+  color: #c40000;
+  line-height: 30rpx;
+  vertical-align: middle;
+}
+.login_text{
+  font-size: 24rpx;
+  color: #c40000;
+  background: rgba(0,0,0,0);
+  display: block;
+}
+.login_text::after{
+  border: none;
+}
+.logo_image {
+  display: block;
+  width: 150rpx;
+  height: 35rpx;
+  margin: 0 auto;
+}

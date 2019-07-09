@@ -1,0 +1,4 @@
+<!--pages/components/go/go.wxml-->
+<view class="goto" bindtap='goSpecialist' hover-class="none" hover-stop-propagation="false">
+    咨询专家
+</view>

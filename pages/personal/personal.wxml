@@ -1,0 +1,31 @@
+<!--pages/personal/personal.wxml-->
+<wxs module='fil' src='../../filter/index.wxs'></wxs>
+<view class='PersonalCenter'>
+    <view class="pic">
+      <view class="head">
+        <image class="photo" src="{{userInfo.avatarUrl}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+        </image>
+      </view>
+      <view class="persongInfo">
+        <view class="name">{{name ? name : userInfo.nickName}}</view>
+        <view class="tel">{{fil.telFormate(telphone)}}</view>
+      </view>
+    </view>
+    <view class="personCenter">
+      <navigator 
+      class="" 
+      target="" 
+      url="{{item.link}}" 
+      hover-class="navigator-hover" 
+      open-type="navigate"
+      wx:for='{{clumnList}}'
+      wx:key="index"
+      >
+        <view class="centerStep">
+          <i class="iconfont, columnIcon,{{item.iconFont}}"></i>
+          <p class="columnName">{{item.name}}</p>
+          <i class='iconfont icon-next columnNext'></i>
+        </view>
+      </navigator>
+    </view>
+  </view>

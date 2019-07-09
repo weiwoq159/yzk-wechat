@@ -1,0 +1,84 @@
+<!--pages/newsDetail/newsDetail.wxml-->
+<wxs module='fil' src='../../filter/index.wxs'></wxs>
+<import src="../../wxParse/wxParse.wxml"/> 
+<view class="container">
+    <custom pageIndex="{{pageIndex}}"></custom>
+    <view class='newsDetail'>
+        <rich-text class='newTitle' nodes="{{news.title}}"></rich-text>
+        <view class='secondFloor'>
+            <text class='come_from'>来源:{{news.source}}</text>
+            <text class='clickNum'>点击量:{{fil.null2zero(news.clicks)}}</text>
+            <text class="creatTime">时间:{{news.time}}</text>
+        </view>
+        <view class="wxParse">
+            <template is="wxParse" data="{{wxParseData:art.nodes}}"/>
+        </view>
+        <view class="click_button">
+            <view class="butt">
+                <view class="{{news.isLiked == 1 ? 'starActive' : 'star'}}" data-index='{{news}}' bindtap='clickgoodup'>
+                    <i class="iconfont {{news.isLiked === 1 ? 'icon-heart1' : 'icon-heart'}}"></i>{{news.liked}}
+                </view>
+                <view data-inde='2' data-reply='{{news}}' bindtap='showReply'>
+                    <i class="iconfont icon-liuyan"></i>{{replyMessage.length}}
+                </view>
+            </view>
+            <view class='clear'></view>
+        </view>
+    </view>
+    <view class='news_Reply' wx:if='{{replyMessage}}'>
+        <view class='listSort'>
+            <view wx:for='{{sort}}' wx:key='index' class="{{highLight===item.id ? 'active' : ''}}" bindtap="changeActive"
+                data-choose='{{index}}'>
+                {{item.name}}
+            </view>
+        </view>
+        <view class="newsreply" wx:for='{{replyMessage}}' wx:key='{{index}}'>
+            <view class="img">
+                <image class="logo_image" src="https://zk.1boyun.com/static/img/logo.png" mode="aspectFit|aspectFill|widthFix"
+                    lazy-load="false" binderror="" bindload="">
+                </image>
+            </view>
+            <view class="right">
+                <view class="reply_content">
+                    <view class="title">{{item.fromUname}}</view>
+                    <view class="title" wx:if='!item.fromUname'></view>
+                    <view class="date">{{fil.formateTime(item.createTimes)}}</view>
+                </view>
+                <view class="reply">{{item.content}}</view>
+                <view class='reply_Mes' wx:if='{{item.relpy && item.relpy.length !== 0}}'>
+                    <view wx:for='{{item.relpy}}' wx:for-item="list" wx:key='{{index}}' wx:if='{{index < 3}}'>
+                        <view>
+                            <text class='reply_Name'>{{list.replyUname}}:</text>
+                            {{list.content}}
+                        </view>
+                    </view>
+                    <view class='readMore' data-item='{{item}}' bindtap='goToDetail' wx:if='{{item.relpy && item.relpy.length > 3}}'>点击查看更多</view>
+                </view>
+                <view class="click_button">
+                    <view class="butt">
+                        <view class="{{item.status === 1 ? 'starActive' : 'star'}}" data-inde='{{index}}' data-index='{{item}}'
+                            bindtap='goodup'>
+                            <i class="iconfont {{item.status === 1 ? 'icon-heart1' : 'icon-heart'}}"></i>{{fil.returnGoodUp(item.goodUp)}}
+                        </view>
+                        <view data-inde='1' data-reply='{{index}}' data-commentId='{{item.id}}' bindtap='showReply'>
+                            <i class="iconfont icon-liuyan"></i>{{item.relpy.length}}
+                        </view>
+                    </view>
+                    <view class='clear'></view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='replyInput' wx:if='{{showOrDis}}' catchtap=''>
+        <view class="inputt">
+            <input 
+            type="text" 
+            value='{{replyContent}}'
+            placeholder='请输入搜索内容'
+            bindinput='changeReply'
+            >
+        </input>
+            <i class='iconfont icon-tijiao' catchtap='displayReply'></i>
+        </view>
+    </view>
+</view>

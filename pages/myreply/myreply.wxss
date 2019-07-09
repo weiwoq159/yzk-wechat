@@ -1,0 +1,58 @@
+/* pages/myreply/myreply.wxss */
+page, .myReply ,.noReply{
+  height:90%;
+}
+.noReply{
+  position: relative;
+}
+.noReply view {
+    text-align: fixed;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .myReply{
+    padding:15px;
+    background: #f8f8f8;
+    height:100%;
+    position: relative;
+  }
+  .reply{
+    background: #fff;
+    padding:26rpx;
+    margin-bottom: 20rpx;
+  }
+  .content{
+    font-size: 24rpx;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20rpx;
+  }
+  .date{
+    font-size: 20rpx;
+    margin-bottom: 22rpx;
+    color:#999;
+  }
+  .el-icon-success,.el-icon-loading,.el-icon-error{
+    font-size: 40px;
+    margin-bottom:15px;
+  }
+  .el-loading-spinner{
+    margin-top:-40px;
+  }
+  .intro{
+    background: #fafafa;
+    display: flex;
+    align-items: center;
+  }
+  .intro image{
+    width: 33px;
+    height: 33px;
+  }
+  .intro view{
+    margin-left:13px;
+    font-size: 12px;
+    color: #333;
+    font-weight: bold;
+  }

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "custom":"../../custom-tab-bar/index",
+    "searchInput": "../components/Search/Search",
+    "goto": "../components/go/go"
+  },
+  "navigationBarTitleText": "人力资源",
+  "navigationStyle": "custom"
+}

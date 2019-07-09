@@ -1,0 +1,216 @@
+/* pages/newsDetail/newsDetail.wxss */
+@import '../../wxParse/wxParse.wxss';
+
+.container {
+    padding-top: 230rpx;
+}
+
+.newsDetail {
+    padding: 56rpx 56rpx;
+    position: relative;
+    background: #fff;
+}
+
+.starActive {
+    color: #c40000;
+    border: 1px solid #c40000 !important;
+}
+
+.newsDetail .newTitle {
+    font-size: 28rpx;
+    color: #333;
+    text-align: center;
+    margin-top: 40rpx;
+    font-weight: 500;
+    margin-bottom: 20rpx;
+    display: block;
+}
+
+.newsDetail .secondFloor {
+    font-size: 20rpx;
+    color: #aaa;
+    text-align: center;
+    margin-bottom: 36rpx;
+}
+
+.come_from {
+  margin-right: 30rpx;
+}
+
+.clickNum {
+  margin-right: 30rpx;
+}
+
+.content {
+  width: 100%;
+  font-size: 3.5vw;
+  line-height: 1.5;
+  color: #666;
+}
+
+.click_button {
+  font-size: 20rpx;
+  color: #666;
+  margin-top: 28rpx;
+}
+
+.click_button .butt {
+    width: 30%;
+    float: right;
+    line-height: 40rpx;
+    display: flex;
+}
+
+.click_button .butt view {
+    text-align: center;
+    height: 30rpx;
+    width: 42rpx;
+    border: 2rpx solid #666;
+    border-radius: 80px;
+    padding: 1px 9px;
+    line-height: 30rpx;
+    display: block
+}
+
+.click_button .butt view:first-child {
+    margin-right: 10px;
+}
+
+.click_button .butt i {
+    font-size: 20rpx;
+    margin-right: 4px;
+}
+
+.reply_Mes {
+    background: #eee;
+    padding: 20rpx 30rpx;
+    font-size: 24rpx;
+    color: #333;
+}
+.news_Reply{
+    background: #eee;
+    padding:30rpx;
+}
+.newsreply {
+    padding: 30rpx;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    margin-bottom: 20rpx;
+}
+
+.img {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 80rpx;
+    overflow: hidden
+}
+
+.img image {
+    width: 100%;
+    height: 100%;
+}
+
+.right {
+    width: 100%;
+    margin-left: 30rpx;
+}
+
+.reply_content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 28rpx;
+    color: #333;
+    font-weight: 500;
+}
+
+.date {
+    font-size: 20rpx;
+    color: #aaa;
+}
+
+.reply {
+    font-size: 24rpx;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 36rpx;
+}
+
+.readMore {
+    display: block;
+    text-align: right;
+    color: #14a7e4;
+}
+
+.listSort {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+
+.listSort view {
+    color: #aaa;
+    font-size: 22rpx;
+    font-weight: 500;
+}
+.active{
+    color:#333!important;
+}
+page, .container, .replyInput{
+    height: 100%;
+}
+.replyInput{
+    position: fixed;
+    top:0px;
+    width: 100%;
+    background: rgba(0,0,0,.4);
+    height: 100%;
+    z-index: 9999;
+}
+.inputt{
+    background: #f6f6f6;
+    width: 100%;
+    height:120rpx;
+    padding:10px 15px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .inputt input {
+    width: 100%;
+    height: 90%;
+    padding: 0 12px;
+    font-size: 16px;
+    background:#eee;
+    border-radius:100px;
+    padding-right: 13vw;
+    border:1px solid #f6f6f6;
+  }
+  .icon-heart1{
+    font-size: 10px;
+  }
+  .icon-tijiao{
+    font-size: 32px;
+    color: #c40000;
+    margin-left: 10px;
+    position:absolute;
+    right:17px;
+  }
+  .newsReply{
+    position: relative;
+    height: 100%;
+  }
+  .insMainConTxt_c{
+      max-width: 100%!important;
+      overflow: scroll;
+  }
+  .wxParse-inline{
+      font-size: 32rpx;
+  }

@@ -1,0 +1,15 @@
+<!--pages/Social/Social.wxml-->
+<view class='container'>
+    <custom pageIndex="{{pageIndex}}"  hierarchy="1"></custom>
+    <view class="pic" hover-class="none" hover-stop-propagation="false" wx:for="{{picList}}" wx:key="{{index}}" style="background-image:url({{item.img}})"
+        bindtap='gotoList' data-nowPage='{{pageIndex}}' data-pageName='{{item.classify}}' data-category='{{category}}'>
+        <view class="left">
+            <text>{{item.classify}}</text>
+            <view class="line"></view>
+        </view>
+        <view class="right">
+            <text>{{item.count}}</text>
+        </view>
+    </view>
+    <goto category="{{category}}"></goto>
+</view>

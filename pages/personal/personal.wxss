@@ -1,0 +1,73 @@
+/* pages/personal/personal.wxss */
+.PersonalCenter{
+    height: 100%;
+    background: #f8f8f8;
+  }
+  .photo{
+    width: 100%;
+    height: 104rpx;
+    border-radius: 100px;
+  }
+  .pic{
+    display: flex;
+    align-items: center;
+    padding:32rpx 44rpx;
+    position: relative;
+    background: #fff;
+  }
+  .head{
+    width: 104rpx;
+    height:104rpx;
+    /*background: #000;*/
+    border-radius: 104rpx;
+  }
+  .persongInfo{
+    margin-left: 32rpx;
+  }
+  .name{
+    font-size: 28rpx;
+    color: #333;
+    margin-bottom: 10rpx;
+  }
+  .tel{
+    background: #c40000;
+    padding: 4rpx 16px;
+    border-radius: 28rpx;
+    font-size: 22rpx;
+    color: #fefefe;
+  }
+  .nextStep{
+    position: absolute;
+    right:20px;
+  }
+  .icon-next{
+    font-size: 32px;
+    color: #aaa;
+    font-weight: bold;
+  }
+  .personCenter{
+    padding:30rpx;
+  }
+  .centerStep{
+    display: flex;
+    position: relative;
+    background: #fff;
+    padding:28rpx 32rpx;
+    align-items: center;
+    border-radius: 3px;
+    margin-bottom:20rpx;
+  }
+  .columnName{
+    font-size: 24rpx;
+    color: #333;
+    margin-left: 32rpx;
+  }
+  .columnIcon{
+    font-size: 32rpx;
+    color: #000;
+  }
+  .columnNext{
+    font-size: 32rpx;
+    position: absolute;
+    right:30rpx;
+  }

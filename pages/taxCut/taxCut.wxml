@@ -1,0 +1,125 @@
+<wxs module='fil' src='../../filter/index.wxs'></wxs>
+<i class="iconfont icon-next1" bindtap='returnHome'></i>
+<view class="back" style="padding-top:{{nowIndex === 14 ? '240rpx': '124rpx'}}" hover-class="none" hover-stop-propagation="false">
+  <image wx:if="{{nowIndex != 14}}" class="taxCut_img" src="https://tax.1boyun.com/static/img/TaxCut/bt.png" mode="aspectFit|aspectFill|widthFix"
+    lazy-load="false" binderror="" bindload="">
+  </image>
+  <view class="question" hover-class="none" hover-stop-propagation="false">
+    <view class="header" hover-class="none" hover-stop-propagation="false">
+      <image class="price" src="https://tax.1boyun.com/static/img/TaxCut/font1.png" mode="aspectFit|aspectFill|widthFix"
+        lazy-load="false" binderror="" bindload="">
+      </image>
+      <view class="money" hover-class="none" hover-stop-propagation="false">
+        <text class="num" wx:for="{{price}}" wx:key='{{index}}'>{{item}}</text>
+      </view>
+    </view>
+    <view class="progress" hover-class="none" hover-stop-propagation="false">
+      <view class="blue_progress" style='width:{{nowIndex / 14 * 100 + "%"}}'>
+      </view>
+    </view>
+    <block wx:for='{{answerList}}' wx:key='{{index}}'>
+      <view class="answerList" wx:if='{{item.id === nowIndex}}'>
+        <view class="title">
+          <text wx:for='{{item.title}}' wx:key='{{item}}'>{{item}}</text>
+        </view>
+        <view class="answerContent">
+          {{item.name}}
+        </view>
+        <view class="yesOrNo" wx:if='{{nowIndex !== 5 && nowIndex !== 7 && nowIndex !== 8 }}'>
+          <image class="yes" bindtap='nextQuest' data-click='true' src="https://tax.1boyun.com/static/img/TaxCut/Yes.png">
+          </image>
+          <image class="no" bindtap='nextQuest' data-click='false' src="https://tax.1boyun.com/static/img/TaxCut/No.png">
+          </image>
+        </view>
+        <view class="selectSon" wx:if="{{nowIndex === 5 || nowIndex === 8}}">
+          <button class="son_button" bindtap='showBrotherNum'>{{sonNum}}
+            <i class="iconfont icon-next" size="23" color="">
+            </i>
+          </button>
+        </view>
+        <view class="treatment" wx:if="{{nowIndex === 7}}">
+          {{treatment}}
+          <input value='{{money.treatment}}' bindinput='changeTreatment' class="treatment_input" placeholder="请输入医疗费用支出金额"
+            type="number" comfirm-type='done'></input>
+          <button bindtap='sureTreatment' class="son_button treatment_sure">确定</button>
+        </view>
+      </view>
+    </block>
+    <view wx:if="{{nowIndex === 14}}" class="result" hover-class="none" hover-stop-propagation="false">
+      <view class='resultTitle'>
+        您的专项附加扣除金额为{{price}}元/年，加上基本扣除费用60000元，共{{price1 + 60000}}元免交个税。
+      </view>
+      <view class='tableList'>
+        <view class="tableTitle">
+          <view>专项附加扣除项目金额明细</view>
+        </view>
+        <view class="tableBody">
+          <view class="colum">
+            <view class='ul'>
+              <view>专项附加扣除项目</view>
+              <view>继续教育</view>
+              <view>子女教育</view>
+              <view>赡养老人</view>
+              <view>房贷利息</view>
+              <view>住房租金</view>
+              <view>大型医疗</view>
+            </view>
+          </view>
+          <view class="colum">
+            <view class='ul'>
+              <view>扣除金额（元/月）</view>
+              <view>{{fil.keepTwoDecimal((detail.education + detail.professional) / 12)}}</view>
+              <view>{{fil.keepTwoDecimal(detail.childrenEducation / 12) }}</view>
+              <view>{{fil.keepTwoDecimal(detail.support / 12)}}</view>
+              <view>{{fil.keepTwoDecimal(detail.twelve / 12)}}</view>
+              <view>{{fil.keepTwoDecimal(detail.rent / 12)}}</view>
+              <view>{{fil.keepTwoDecimal(detail.treatment / 12)}}</view>
+            </view>
+          </view>
+          <view class="colum">
+            <view class='ul'>
+              <view>扣除金额（元/年）</view>
+              <view>{{fil.keepTwoDecimal((detail.education + detail.professional))}}</view>
+              <view>{{fil.keepTwoDecimal(detail.childrenEducation) }}</view>
+              <view>{{fil.keepTwoDecimal(detail.support)}}</view>
+              <view>{{fil.keepTwoDecimal(detail.twelve)}}</view>
+              <view>{{fil.keepTwoDecimal(detail.rent)}}</view>
+              <view>{{fil.keepTwoDecimal(detail.treatment)}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="tableFooter">
+          <view class="text">合计:{{price1}}</view>
+          <view class="clear"></view>
+        </view>
+      </view>
+      <view class='tips'>1.房贷利息与住房租金不可同时扣除，计算时将按照最有利于您的扣除方案计算</view>
+      <view class='tips'>2.根据大病医疗扣除标准，累计超过1.5万元的纳税人，每年有8万元额度，因此超过8万元部分只能按照8万元计算！ </view>
+      <view class='tips'>3.如果兄弟姐妹多人，但只指定其中某几个人承担赡养费，请保留兄弟姐妹之间签署的赡养协议</view>
+    </view>
+  </view>
+  <view class="lastStep">
+    <view bindtap='again' wx:if="{{nowIndex===14}}">
+      <image src="https://tax.1boyun.com/static/img/TaxCut/return.png" alt=""></image>
+    </view>
+    <view bindtap='historyed' wx:if="{{nowIndex!==14&&nowIndex!==1}}">
+      <image src="https://tax.1boyun.com/static/img/TaxCut/lastStep.png" alt=""></image>
+    </view>
+  </view>
+</view>
+<view class="sonNumModel" wx:if='{{brotherShowOrDis}}'>
+  <view class="sonBox">
+    <view>选择子女个数</view>
+    <view class="numPart">
+      <view class="num1" bindtap='displayBox' data-now='{{nowIndex}}' data-clickNum='0' wx:if='{{nowIndex===8}}'>
+        <view>0</view>
+      </view>
+      <view class="num1" wx:for='{{num}}' data-now='{{nowIndex}}' data-clickNum='{{item}}' wx:key='{{item}}' bindtap='displayBox'>
+        <view>{{item}}</view>
+      </view>
+      <view class="num1" bindtap='displayBox' data-now='{{nowIndex}}' data-clickNum='10' wx:if='{{nowIndex===5}}'>
+        <view>10</view>
+      </view>
+    </view>
+  </view>
+</view>

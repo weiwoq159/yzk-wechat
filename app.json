@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/specialist/specialist",
+    "pages/mySpecialist/mySpecialist",
+    "pages/personal/personal",
+    "pages/Social/Social",
+    "pages/login/login",
+    "pages/askExperts/askExperts",
+    "pages/answerDetail/answerDetail",
+    "pages/taxCut/taxCut",
+    "pages/Choiceness/Choiceness",
+    "pages/newsDetail/newsDetail",
+    "pages/PublishedArticles/PublishedArticles",
+    "pages/ManpowerResource/ManpowerResource",
+    "pages/myreply/myreply",
+    "pages/mypublish/mypublish",
+    "pages/newsList/newsList",
+    "pages/ReservedFunds/ReservedFunds",
+    "pages/Taxation/Taxation",
+    "pages/SearchResult/SearchResult",
+    "pages/logs/logs",
+    "pages/replyDetail/replyDetail",
+    "pages/1boyun/1boyun",
+    "pages/components/go/go"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wxd80ef70ff79115d6"
+  ]
+}

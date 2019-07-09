@@ -1,0 +1,45 @@
+/* pages/PublishedArticles/PublishedArticles.wxss */
+page {
+    background: #fff;
+}
+picker view{
+    text-align: left!important;
+}
+.upData{
+    position:relative;
+    box-shadow: 0 25px 72px 0 #999;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0.1rem 0;
+    background:#fff;
+    padding:20rpx 26rpx;
+    box-sizing: border-box;
+  }
+  .upButt{
+    background: #c40000!important;
+    color: #fff;
+    text-align: center;
+    /*padding:5px 0px;*/
+    display:block;
+    width: 45%;
+    margin: 0 auto;
+    border-radius: 20px;
+    align-items: center;
+    font-size: 4vw;
+    line-height: 4vw;
+    line-height: 7vw;
+  }
+  .upButt::after{
+      border: none
+  }
+  .downButt {
+    background: #ffa200!important;
+  }
+  .top{
+    min-height:800rpx;
+  }
+  textarea {
+      height: 100%;
+  }

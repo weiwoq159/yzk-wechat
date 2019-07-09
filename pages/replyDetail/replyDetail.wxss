@@ -1,0 +1,222 @@
+/* pages/replyDetail/replyDetail.wxss */
+.replyMesq {
+    display: -ms-flexbox;
+    display: flex;
+    background: #fff
+  }
+  
+  .left {
+    padding: 15px 0 0 15px
+  }
+  
+  .name {
+    margin: 15px 0
+  }
+  
+  .userName {
+    color: #333;
+    font-size: 14px
+  }
+  
+  .time {
+    font-size: 11px;
+    color: #999
+  }
+  
+  .content view {
+    font-size: 12px;
+    color: #666
+  }
+  
+  .reply {
+    padding: 13px 13px 0
+  }
+  
+  .inputt input {
+    width: 100%;
+    height: 100%;
+    z-index:9998;
+  }
+  
+  .container {
+    background: #fff;
+    padding: 16px;
+    width: 100%
+  }
+  
+  .newsBottom {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    margin-top: 7px;
+    font-size: 10px
+  }
+  
+  .newsBottom view {
+    border: 1px solid #666;
+    color: #666;
+    padding: .6vw 3vw;
+    border-radius: 30px;
+    line-height: 3.5vw
+  }
+  
+  .newsBottom .star {
+    margin-right: 11px;
+    font-size: 12px
+  }
+  
+  .newsBottom .star .iconfont {
+    font-size: 12px
+  }
+  
+  .newsBottom .starActive {
+    margin-right: 11px;
+    color: red !important;
+    border: 1px solid red !important
+  }
+  
+  .bottom {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse
+  }
+  
+  .bottom .clickNum {
+    margin-top: 7px;
+    line-height: 31px;
+    font-size: 10px;
+    color: #999
+  }
+  
+  .photoImg image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%
+  }
+  
+  .active {
+    color: #333 !important
+  }
+  
+  .reply {
+    background: #f8f8f8;
+    padding: 10px 12px
+  }
+  
+  .listSort {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 5px 0
+  }
+  
+  .listSort view {
+    color: #aaa;
+    font-size: .11rem
+  }
+  
+  .replyMes {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 3vw
+  }
+  
+  .photoImg {
+    width: 40px;
+    height: 40px
+  }
+  
+  .name {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center
+  }
+  
+  .title {
+    font-size: 14px;
+    color: #333;
+    margin-top: -3vw
+  }
+  
+  .date {
+    font-size: 10px;
+    color: #aaa
+  }
+  
+  .text {
+    font-size: 12px;
+    color: #666
+  }
+  
+  .messageReply {
+    border-top: 1px solid #eee;
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 0 17px
+  }
+  
+  .messageReply ul {
+    padding: 10px 15px
+  }
+  
+  .messageReply ul li {
+    margin-top: 3px;
+    line-height: 6vw
+  }
+  
+  .more {
+    text-align: right;
+    font-size: 12px;
+    margin-top: 15px !important
+  }
+  
+  .message .iconfont {
+    font-size: 12px
+  }
+
+.click_button {
+    font-size: 20rpx;
+    color: #666;
+    margin-top: 28rpx;
+}
+
+.click_button .butt {
+    width: 33%;
+    float: right;
+    line-height: 40rpx;
+    display: flex;
+}
+
+.click_button .butt view {
+    text-align: center;
+    height: 30rpx;
+    width: 42rpx;
+    border: 2rpx solid #666;
+    border-radius: 80px;
+    padding: 1px 9px;
+    line-height: 30rpx;
+    display: block;
+    font-size: 20rpx;
+}
+
+.click_button .butt view:first-child {
+    margin-right: 10px;
+}
+
+.click_button .butt i {
+    font-size: 20rpx;
+    margin-right: 4px;
+}
+
+.reply_Mes {
+    background: #eee;
+    padding: 20rpx 30rpx;
+    font-size: 24rpx;
+    color: #333;
+}

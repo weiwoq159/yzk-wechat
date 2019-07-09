@@ -1,0 +1,21 @@
+<!--pages/PublishedArticles/PublishedArticles.wxml-->
+<view class="cu-form-group">
+  <view class='title'>标题:</view>
+  <input placeholder="标题" bindinput="setTitle" class='radius' name='input'></input>
+</view>
+<view class="cu-form-group">
+  <view class='title'>类型:</view>
+  <picker bindchange="PickerChange" value="{{item.label}}" range="{{picker}}" range-key='label'>
+    <view class="picker">
+        {{publish.index ? picker[publish.index].label : picker[0].label}}
+    </view>
+  </picker>
+</view>
+<view class="cu-form-group top" wx:hide="{{modalName==null}}">
+  <view class='title'>内容:</view>
+  <textarea bindinput='setContent' placeholder="多行文本输入框" maxlength="-1" disabled="{{modalName!=null}}" placeholder-class='placeholder'></textarea>
+</view>
+<div class="upData">
+  <button class='upButt' type="primary" bindtap='submit'>发布精选</button>
+  <button class='upButt downButt' type="primary" bindtap='cancel'>取消发布</button>
+</div>

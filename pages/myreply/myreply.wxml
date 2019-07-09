@@ -1,0 +1,17 @@
+<wxs module='fil' src='../../filter/index.wxs'></wxs>
+<view class='myReply' type="primary">
+    <view class="reply" wx:for='{{contentList}}' wx:key='index'>
+        <view class='content'>
+            <text wx:if='{{item.toUname}}'>回复：{{item.toUname}} </text>{{item.content}}
+        </view>
+        <view class='date'>{{fil.formateTime(item.createTime)}}</view>
+        <view class='intro' bindtap='goToNews' data-news='{{item}}'>
+            <image class="" src="https://zk.1boyun.com/static/img/afPic1.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+            </image>
+            <view>{{item.bookTitle}}</view>
+        </view>
+    </view>
+    <view class='noReply' wx:if='{{contentList.length===0}}'>
+        <view>该用户暂无评论</view>
+    </view>
+</view>

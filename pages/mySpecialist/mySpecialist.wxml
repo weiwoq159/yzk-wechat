@@ -1,0 +1,33 @@
+<wxs module='fil' src='../../filter/index.wxs'></wxs>
+<view class="container" hover-class="none" hover-stop-propagation="false">
+    <view class="specia" hover-class="none" hover-stop-propagation="false">
+        <button class="gotoDetail" bindtap='AskExperts'>问专家</button>
+    </view>
+    <view class="specia_tab" hover-class="none" hover-stop-propagation="false">
+        <view class="tab_title">
+            我的问答
+        </view>
+        <view class="tab_detail_list">
+            <view class="tab_detail_ceil" wx:for='{{tabDetailCeil}}' wx:key='{{index}}'>
+                <view class="title">
+                    {{item.issueContent}}
+                </view>
+                <view wx:if='{{item.content}}' class="user" hover-class="none" hover-stop-propagation="false">
+                    <image class="AnswerPortrait" src="https://zk.1boyun.com/static/img/photo.png">
+                    </image>
+                    <text class="answer_name">{{item.userName}}</text>
+                    <text class="position">{{item.expertsType}}</text>
+                </view>
+                <view wx:if='{{item.content}}' class="content">
+                    <text class="answer">答:</text>
+                    <view class='detail_content'>
+                        {{item.content}}
+                    </view>
+                </view>
+                <view wx:if='{{item.content}}' class='time'>
+                    <text>{{fil.iosDateFilter(item.creationTime)}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

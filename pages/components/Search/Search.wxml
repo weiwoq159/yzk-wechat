@@ -1,0 +1,19 @@
+<!--pages/components/Search/Search.wxml-->
+<view class='SearchInput'>
+    <view class="ChooseBox">
+        <view bindtap='changeLab'>{{name}}
+            <i class='iconfont, icon-top,{{labelDis ? "aa" : "go"}}'></i>
+        </view>
+        <transition name="fade">
+            <view class='search_ul' wx:if='{{labelDis}}'>
+                <view wx:for='{{options}}' wx:key='index' bindtap='changeChose' class="{{index===index1 ? 'SelectOne' : 'bbb'}}"
+                    data-item='{{item}}'>{{item.name}}</view>
+                <view class="sanjiao"></view>
+            </view>
+        </transition>
+    </view>
+    <view class="search_input">
+        <input bindconfirm='SearchInput' confirm-type='search' type="text" placeholder='请输入搜索内容' bindinput='searchword' value="{{searchKey}}"></input>
+        <i class="iconfont icon-search" bindtap='SearchInput'></i>
+    </view>
+</view>

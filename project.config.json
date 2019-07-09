@@ -1,0 +1,98 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.5.1",
+	"appid": "wxb643ac2a06649482",
+	"projectname": "%E7%87%9A%E6%99%BA%E5%BA%93",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 6,
+			"list": [
+				{
+					"id": -1,
+					"name": "扫码登陆",
+					"pathName": "pages/index/index",
+					"query": "scene=1",
+					"scene": 1011
+				},
+				{
+					"id": -1,
+					"name": "1为",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": 1044,
+					"shareInfo": {
+						"groupName": "测试模拟群0",
+						"shareName": "zsB9B3TD4-XurpgF9iDPg9XBHZzfImbfCahK1nJKYek@cr4dev",
+						"shareKey": "WGU-qF3WKxTCeWczyDfNJnoQ8_FmfYxw64WfUC1ffZgqVgR16nWs141X2u_0gKP-VoseXoXmSJEZhzhnlMkZwA~~"
+					}
+				},
+				{
+					"id": -1,
+					"name": "123123",
+					"pathName": "pages/login/login",
+					"query": "scene=122",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "123123",
+					"pathName": "pages/personal/personal",
+					"query": "scene=122",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "789",
+					"pathName": "pages/newsDetail/newsDetail",
+					"query": "bookId=6486771406654566400",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "specialist",
+					"pathName": "pages/specialist/specialist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "公积金",
+					"pathName": "pages/ReservedFunds/ReservedFunds",
+					"scene": null
+				}
+			]
+		}
+	}
+}

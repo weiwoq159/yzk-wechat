@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view class='HomePageHeader'>
+  <view class='HomePageHeader'>
+    <view class="login">
+      <button bindgetuserinfo='specialist' open-type="getUserInfo" class="login_text" >
+        <i class='iconfont icon-shangyibu'></i>燚税管家
+      </button>
+      <button bindgetuserinfo='login' open-type="getUserInfo" class="login_text" >
+        <i class='iconfont icon-person'></i>个人中心
+      </button>
+    </view>
+  </view>
+  <view class="logo">
+    <image class='home_logo' src="/static/img/logo.png" alt=""></image>
+  </view>
+  <view class='SearchInput'>
+    <input 
+    class='search' 
+    value='{{searchInput}}' 
+    type='text' 
+    placeholder='请输入搜索内容' 
+    confirm-type='search'
+    bindinput='changeSearch'
+    bindconfirm='gotoSearch'
+    >
+    </input>
+    <text bindtap='gotoSearch' class='iconfont icon-search'></text>
+  </view>
+  <view class='navigation'>
+    <navigator 
+    wx:for="{{navigation}}" 
+    wx:key="{{index}}"
+    class='navigation_bar'
+    url='{{item.pagePath}}'
+    >
+      {{item.text}}
+    </navigator>
+  </view>
+</view>

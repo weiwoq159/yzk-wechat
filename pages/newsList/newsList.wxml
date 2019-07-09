@@ -1,0 +1,48 @@
+<!--pages/newsList/newsList.wxml-->
+<!--pages/Choiceness/Choiceness.wxml-->
+<wxs module='fil' src='../../filter/index.wxs'></wxs>
+<view class="container">
+    <custom pageIndex="{{pageIndex}}" hierarchy="2"></custom>
+    <view class="news" hover-class="none" hover-stop-propagation="false">
+        <view class='listSort'>
+            <view 
+                wx:for='{{sort}}' 
+                wx:key='{{index}}' 
+                class="{{highLight===item.id ? 'active' : ''}}" 
+                bindtap="changeActive" 
+                data-choose='{{index}}'>
+                {{item.name}}
+            </view>
+        </view>
+        <view class='newsList' wx:for="{{newsList}}" wx:key="index">
+            <view bindtap='gotoDetail' data-bookId='{{item.id}}' data-category='{{category}}' data-nowPage='{{pageIndex}}'>
+                <view class="title">
+                    <i class="essence" wx:if='{{item.essence === 1}}'>
+                        <i class='iconfont icon-anonymous-iconfont'></i>
+                        精华
+                    </i>
+                    <rich-text class='newTitle' nodes="{{item.title}}"></rich-text>
+                </view>
+                <view class="content">
+                    <text>{{fil.newsTitle(item.intro, 80)}}</text>
+                </view>
+            </view>
+            <view class='bottom'>
+                <text class='tags'>{{item.tags}}</text>
+                <text class='from'>来源:{{fil.newsTitle(item.source, 10)}}</text>
+                <text class='time'>更新时间:{{fil.timeFormate(item.ceateTime)}}</text>
+            </view>
+            <view class="click_button">
+                <view class="butt">
+                    <view class="{{item.isLiked === 1 ? 'starActive' : 'star'}}" data-index='{{index}}' bindtap='goodup'>
+                        <i class="iconfont {{item.isLiked === 1 ? 'icon-heart1' : 'icon-heart'}}"></i>{{fil.null2zero(item.liked)}}
+                    </view>
+                    <view>
+                        <i class="iconfont icon-liuyan"></i>{{fil.null2zero(item.commentNum)}}
+                    </view>
+                </view>
+                <view class='clear'></view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,16 @@
+/* pages/components/go/go.wxss */
+.goto{
+    position: fixed;
+    right: 30px;
+    bottom: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    color: aliceblue;
+    background: #c40000;
+    text-align: center;
+    padding:10px;
+    box-sizing: border-box;
+    line-height: 1.1;
+    font-weight: 500;
+}

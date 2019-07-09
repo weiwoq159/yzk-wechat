@@ -1,0 +1,112 @@
+/**index.wxss**/
+page{
+  background: #fff;
+}
+.logo{
+  text-align: center;
+  margin-bottom: 28rpx;
+}
+.HomePage{
+  height: 100%;
+}
+.logo{
+  margin-top:190rpx;
+}
+.logo .home_logo{
+  width: 223rpx;
+  height: 54rpx;
+}
+.icon-shangyibu{
+  margin-right: 5px;
+}
+
+.login{
+  display: flex;
+  justify-content: space-between
+}
+.login_text .iconfont{
+  font-size:36rpx;
+  vertical-align: middle;
+  color:#c40000;
+  line-height: 55rpx;
+}
+.login_text{
+  font-size: 24rpx;
+  vertical-align: middle;
+  color: #333;
+  background: rgba(0,0,0,0);
+  display: inline-block;
+  margin:0;
+}
+.login_text::after{
+  border: none;
+}
+.SearchInput{
+  padding:0 59rpx;
+  position: relative;
+  margin-top: 30rpx;
+}
+.search{
+  border:1px solid #aaa;
+  height: 60rpx;
+  font-size: 28rpx;
+  border-radius: 60rpx;
+  padding-left:40rpx;
+}
+.icon-search{
+  position: absolute;
+  top:11rpx;
+  right: 90rpx;
+  color: #333;
+  font-weight: 900;
+  border-left: 1px solid #aaa;
+  padding-left: 22rpx;
+  font-size: 38rpx;
+  display: inline;
+  z-index: 999
+}
+.navigation{
+  padding: 0 69rpx;
+  margin-top: 40rpx;
+  display: flex;
+  justify-content: space-around;
+  color: #666;
+  font-size: 24rpx;
+}
+.navigation_bar{
+  color: #666;
+  padding: 0 9rpx;
+  border-right: 1px solid #eee
+}
+.navigation_bar:first-child {
+  padding-left: 0;
+}
+.navigation_bar:last-child {
+  padding-right: 0;
+  border-right-style: none;
+}
+.toptab{
+  margin-top: 40rpx;
+  height:90rpx;
+  position: relative;
+  display: flex;
+  align-items: center
+}
+.button_group{
+  position: absolute;
+  display: flex;
+  justify-content: space-around
+}
+.button_group i{
+  display: block;
+  height:30rpx;
+  width: 30rpx;
+  margin:0rpx 20rpx;
+  color: #c40000;
+}
+.logo_image{
+  display: block;
+  width: 150rpx;
+  height:35rpx;
+  margin:0 auto;
+}

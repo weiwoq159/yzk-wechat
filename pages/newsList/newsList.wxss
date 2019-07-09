@@ -1,0 +1,135 @@
+/* pages/newsList/newsList.wxss */
+/* pages/Choiceness/Choiceness.wxss */
+.news {
+    background: #eee;
+    padding: 25rpx;
+    margin: 0px;
+    border-radius: 40rpx;
+    padding-top:0;
+}
+
+.selection {
+    text-align: center;
+    font-size: 28rpx;
+    margin-bottom: 30rpx;
+    color: #333;
+}
+
+.newsList {
+    background: #fff;
+    padding: 30rpx;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.title .essence {
+    font-size: 22rpx;
+    background: #c40000;
+    padding: 6rpx 10rpx;
+    color: #fff;
+    border-radius: 100rpx;
+    margin-right: 20rpx;
+    white-space: nowrap
+}
+
+.title .newTitle {
+    font-size: 28rpx;
+    color: #333;
+    word-wrap: break-word;
+    display: inline;
+}
+
+.content {
+    margin-top: 20rpx;
+    line-height: 1;
+    text-indent: 24rpx;
+}
+
+.content text {
+    font-size: 24rpx;
+    color: #666;
+}
+
+.icon-anonymous-iconfont {
+    margin: -4rpx;
+    font-size: 24rpx;
+}
+
+.bottom {
+    margin-top: 25rpx;
+    font-size: 20rpx;
+    color: #aaa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom .tags {
+    border: 1px solid #aaa;
+    padding: 6rpx 20rpx;
+    border-radius: 20px;
+}
+
+.bottom .from {
+    margin-left: 20rpx;
+}
+
+.click_button {
+    font-size: 20rpx;
+    color: #666;
+    margin-top: 28rpx;
+}
+
+.click_button .butt {
+    width: 30%;
+    float: right;
+    line-height: 40rpx;
+    display: flex;
+}
+
+.click_button .butt view {
+    text-align: center;
+    display: inline-block;
+    height: 30rpx;
+    border: 2rpx solid #666;
+    border-radius: 80px;
+    padding: 1px 9px;
+    line-height: 30rpx;
+}
+
+.click_button .butt view:first-child {
+    margin-right: 10px;
+}
+
+.click_button .butt i {
+    font-size: 20rpx;
+    margin-right: 4px;
+}
+
+.starActive {
+    color: #c40000;
+    border: 1px solid #c40000 !important;
+}
+
+.listSort {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+
+}
+
+.listSort view {
+    color: #aaa;
+    font-size: 22rpx;
+    font-weight: 500;
+}
+
+.active {
+    color: #333 !important
+}

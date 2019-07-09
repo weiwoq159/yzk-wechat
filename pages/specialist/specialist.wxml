@@ -1,0 +1,86 @@
+<wxs module='fil' src='../../filter/index.wxs'></wxs>
+<view class="container" hover-class="none" hover-stop-propagation="false">
+    <view class="specia" hover-class="none" hover-stop-propagation="false">
+        <button class="gotoDetail" bindtap='AskExperts'>问专家</button>
+    </view>
+    <view class="specia_tab" hover-class="none" hover-stop-propagation="false">
+        <view class="tab_title">
+            <view 
+            wx:for="{{speciaList}}" 
+            class="{{chooseList === item.id ? 'active' : ''}}" 
+            wx:key='{{index}}'
+            bindtap='changetab'
+            data-index='{{item.id}}'
+             >
+                {{item.name}}
+                <view class="line" hover-class="none" hover-stop-propagation="false">
+                </view>
+            </view>
+        </view>
+        <view class="tab_detail_list">
+            <view class="tab_detail_ceil" wx:for='{{tabDetailCeil}}' wx:key='{{index}}'>
+                <view class='firStep'>
+                    <view class="head">
+                        <image src='https://zk.1boyun.com/static/img/head.png'></image>
+                    </view>
+                    <view>
+                        <rich-text nodes="{{item.issueContent}}" class="title">
+                        </rich-text> 
+                        <rich-text nodes="{{item.quizUser}}" class="title userName">
+                        </rich-text> 
+                    </view>
+                </view>
+                <view 
+                    class="user"
+                    hover-class="none"
+                    hover-stop-propagation="false"
+                    wx:if="{{item.content}}"
+                >
+                    <image class="AnswerPortrait" src="https://zk.1boyun.com/static/img/photo.png">
+                    </image>
+                    <text class="answer_name">{{item.userName}}</text>
+                    <text class="position">{{item.expertsType}}</text>
+                </view>
+                <view class="content" wx:if="{{item.content}}">
+                    <text class="answer">答:</text>
+                    <view class='detail_content'>
+                        {{item.content}}
+                    </view>
+                </view>
+                <view class='time' wx:if='{{item.content}}'>
+                    <text>{{item.replaceCreationTime}}</text>
+                </view>
+                <view class='reply_Mes' wx:if='{{item.issueCommentList && item.issueCommentList.length !== 0}}'>
+                    <view wx:for='{{item.issueCommentList}}' wx:for-item="list" wx:key='{{index}}' wx:if='{{index < 3}}'>
+                        <view>
+                            <text class='reply_Name'>{{list.userName}}:</text>
+                            {{list.content}}
+                        </view>
+                    </view>
+                    <view class='readMore' data-item='{{item}}' bindtap='goToDetail' wx:if='{{item.issueCommentList && item.issueCommentList.length > 3}}'>点击查看更多</view>
+                </view>
+                <view class="click_button" wx:if='{{item.content}}'>
+                    <view class="{{item.praiseStatus === 1 ? 'starActive' : 'star'}}" data-index='{{index}}' bindtap='goodup' data-content='{{item}}'>
+                        <i class="iconfont {{item.praiseStatus === 1 ? 'icon-heart1' : 'icon-heart'}}"></i>{{fil.null2zero(item.liked)}}
+                    </view>
+                    <view bindtap='showReply' data-commentId='{{item.id}}' >
+                        <i class="iconfont icon-liuyan"></i>{{fil.null2zero(item.issueCommentList.length)}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='replyInput' wx:if='{{showOrDis}}' catchtap=''>
+        <view class="inputt">
+            <input 
+            type="text" 
+            value='{{replyContent}}'
+            placeholder='请输入评论内容'
+            bindinput='changeReply'
+            catchtap='godo'
+            >
+        </input>
+            <i class='iconfont icon-tijiao' catchtap='displayReply'></i>
+        </view>
+    </view>
+</view>

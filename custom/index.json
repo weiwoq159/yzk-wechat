@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "toptab": "../pages/components/TopTab/TopTab",
+    "searchInput": "../pages/components/Search/Search"
+  }
+}

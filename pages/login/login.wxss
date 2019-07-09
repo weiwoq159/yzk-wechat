@@ -1,0 +1,144 @@
+/**index.wxss**/
+/* .userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+
+.usermotto {
+  margin-top: 200px;
+} */
+  .container {
+    padding-top:0px;
+  }
+ .login{
+     width: 100%;
+     height: 100%;
+    text-align: center;
+     min-height: fill-available;
+     min-height: -webkit-fill-available;
+     background: url(https://tax.1boyun.com/static/img/index/LoginBg.png);
+     background-size: 100% 100%;
+  }
+  .login .logo{margin-top:15vw; width: 50vw;height: 13vw;}
+  .login .getCodeStyle{margin-top:1%;}
+  .login view input.txt,.passWord{width:70%; height:11vw;padding-left:5vw; border:none;border-radius:80px;background:#eee;outline: none;font-size:4vw;text-align: left;margin-top: 20vw;margin-left: 12%}
+  .login view input.passWord{margin-top: 5vw;width:52%}
+  .login view .LoginTelCancel {width: 4vw;height: 4vw; position: absolute; margin-left: 30vw; margin-top: -7.8vw;}
+  .login view .login_btn{ margin:0 auto; margin-top: 5%; width:70%; height:11vw;line-height: 11vw; padding-left:10px; border:none;border-radius:100px;color:#fff; background:#c40000;font-size:4.8vw;}
+  .login view .imgCodeParent{position: relative;}
+  .login view .phoneParent{position:relative}
+  .login view .login_img{ display: inline-block; height:11vw; line-height:11vw; width:25%; margin-left:-25%; border:none;border-radius:100px; color:#fff; outline:none;position:absolute;z-index:1;right:13vw;top:0;
+  }
+  .login .form view{margin-bottom: 8%;}
+  .login view .getCodeStyle{position: absolute;right:14vw;top:-1vw;height: 11vw;line-height: 11vw;width: 25%;margin-left:12vw;border: none;border-radius: 100px;color: #fff;background: #131d36;font-size: 3.5vw;}
+   .login view .login_code{position: absolute;display: inline-block;height: 11vw;line-height: 11vw;width: 25%;margin-left:12vw;margin-top: -11vw;border: none;border-radius: 100px;color: #fff;background: #131d36;outline: none; font-size: 3.5vw;}
+  .login footer{position:fixed;bottom:0px;width:100%;}
+  .login footer image{width: 100%;}
+  .login .agreement{text-align: left;margin-left: 14%;margin-top: -5vw;}
+  .login .agreement .checked{vertical-align: text-top;margin-right: 2vw;margin-top: 3vw}
+  .login .agreement view{color:#131d36;position: absolute;margin-left: 8vw;margin-top: -5.5vw;font-size: 4vw}
+  .alertBox .wrap {
+    position: absolute;
+    z-index: 1002;
+    width: 90%;
+    height: 121vw;
+    padding: 2vw;
+    background: rgba(255,255,255,1);
+    left: 50%;
+    top: 16vw;
+    transform: translate(-50%, 0%);
+    border-radius: 4px;
+}
+.alertBox .alert_subTitle {
+    font-size: 4.5vw;
+    border: none;
+}
+.alertBox .subContent {
+    font-size: 3.8vw;
+    margin: 0;
+    text-indent: 5vw;
+}
+
+.alertBox .alert_subTitle2 {
+    width: 84%;
+    font-size: 3.8vw;
+    padding-right: 4vw;
+    margin-bottom: 10px;
+    overflow: scroll;
+    text-align: justify;
+    line-height: 5.5vw;
+    margin-left: 8%;
+    -webkit-overflow-scrolling: touch;
+
+}
+.foot{
+    height:10vw;
+    width:100%;
+    box-shadow:0px -23px 32px -4px #f8f8f8;
+    background:#fff;
+    z-index:9999999;
+    display: flex;
+    justify-content: space-around
+}
+.blackBtn2 {
+    padding: 0vw 6vw;
+    font-size: 4vw;
+    margin-top: 4%;
+    width: 20vw;
+
+}
+.redBtn2{
+    padding: 0vw 6vw;
+    font-size: 4vw;
+    margin-top: 4%;
+    width: 20vw;
+}
+.alertBox{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 1000;
+  transition: all .5s ease-in-out;
+}
+/* 弹窗按钮 */
+.redBtn2{
+  width: 47%;
+  height: 7vw;
+  line-height: 7vw;
+  font-size: 4vw;
+  border-radius: 10vw;
+  color: #ffffff !important;
+  background-color: #c40000;
+  text-align: center;
+}
+ .blackBtn2{
+  width: 47%;
+  height: 7vw;
+  line-height: 7vw;
+  margin-bottom: 2vw;
+  /*margin-top: 2.3vw;*/
+  font-size: 4vw;
+  border-radius: 10vw;
+  color: #ffffff !important;
+  background-color: #131d36;
+  text-align: center;
+ }
+.button-hover{
+  transform: translate(1rpx, 1rpx);
+}

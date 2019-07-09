@@ -1,0 +1,194 @@
+/* pages/mypublish/mypublish.wxss */
+.selectList1 view {
+  text-align: center;
+  padding: 8px 0;
+  font-size: 12px;
+}
+
+.year .selectList1 {
+  width: 80px;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.choseName {
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.el-input__suffix {
+  right: 13px;
+}
+
+.selectList1 {
+  position: absolute;
+  left: 10px;
+}
+
+.selectList {
+  position: absolute;
+  right: 0px;
+  z-index:999
+}
+
+.screen {
+  position: relative;
+  text-align: center;
+}
+
+.pullList {
+  display: flex;
+}
+
+.screen .selectList view {
+  text-align: center;
+  padding: 8px 0;
+  font-size: 12px;
+}
+
+.screen .selectList {
+  width: 80px;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.choseName {
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.icon-liebiao {
+  font-size: 14px;
+}
+
+.myPublish {
+  min-height: 100%;
+  background: #eee;
+  padding: 13px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.select {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.selected1 {
+  width: 70px;
+}
+
+.selcted2 {
+  width: 70px;
+}
+
+.selcted2 span {
+  display: none;
+}
+
+.selcted2 input {
+  text-align: center;
+}
+
+.selected1 div .el-input__inner {
+  padding-right: 0px;
+  padding: 0px;
+  background: rgba(0, 0, 0, 0);
+  border-style: none;
+  color: #333;
+}
+
+.selected1 .el-input .el-select__caret {
+  color: #333;
+}
+
+.icon-lowertriangle {
+  font-size: 10px;
+  line-height: 20px;
+  margin-left: 4px;
+}
+
+.icon-liebiao {
+  line-height: 20px;
+}
+
+.backg {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, .3);
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-inde:998;
+}
+
+.state {
+  float: right;
+  font-size: 12px;
+  color: #aaa
+}
+
+.publishList {
+  padding: 15px;
+  background: #fff;
+  margin-bottom: 10px
+}
+
+.publishList .pub {
+  width: 100%;
+  display: block;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: stretch;
+  align-items: stretch
+}
+
+.publishList .pub .left .month {
+  font-size: 10px;
+  color: #333;
+  white-space: nowrap;
+  font-weight: 300
+}
+
+.publishList .pub .left .data {
+  font-size: 14px;
+  font-weight: 900;
+  color: #333;
+  white-space: nowrap
+}
+
+.publishList .right{
+  margin-left: 15px;
+  width: 100%
+}
+
+.publishList .right .title {
+  font-size: 14px;
+  width: 100%;
+  color: #333
+}
+
+.publishList .right .content {
+  font-size: 12px;
+  color: #666;
+  margin-top: 9px;
+  line-height: 1.5
+}
+
+.publishList image {
+  width: 68px;
+  height: 68px;
+  margin: 0 16px
+}
+
+.shenhe {
+  color: #ffa200
+}
+
+.defeated {
+  color: #c40000
+}
